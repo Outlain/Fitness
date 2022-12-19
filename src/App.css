@@ -3,16 +3,12 @@
   margin: 0;
   box-sizing: border-box;
 }
-#root {
-  /* background: center/contain no-repeat url("./img/westside-img.png"); */
-  background-color: rgba(0, 0, 0, 0.9);
-}
+
 nav {
   position: sticky;
   top: 0;
   height: 10vh;
   width: 100vw;
-  background-color: rgb(0, 0, 0);
   padding: 15px;
   display: flex;
   justify-content: center;
@@ -67,12 +63,7 @@ section div {
   border: 0.1rem solid black;
   border-radius: 50px;
 }
-section div:nth-child(odd) {
-  background-color: rgba(0, 1, 4, 0.8);
-}
-section div:nth-child(even) {
-  background-color: rgba(21, 45, 199, 0.3);
-}
+
 .top {
   grid-column: span 2;
   grid-row: 1;
@@ -106,10 +97,15 @@ section div:nth-child(even) {
 .chart span {
   height: 90%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   width: 20%;
   border-radius: 50px;
+}
+.chart span canvas {
+  height: 90%;
+  width: 100%;
 }
 .chart span:first-child {
   border: 0.1rem solid black;
@@ -126,4 +122,23 @@ section div:nth-child(even) {
   grid-row: 4;
   height: 100%;
   width: 100%;
+}
+
+/* COLOR */
+#root {
+  background: center/cover no-repeat
+    url("./img/cryptocurrencybackgroundtwo.gif");
+  background-color: rgba(63, 58, 58, 0.9);
+}
+nav {
+  background-color: rgba(3, 10, 109, 0.5);
+}
+section div:nth-child(odd) {
+  background-color: rgba(0, 1, 4, 0.5);
+}
+section div:nth-child(even) {
+  background-color: rgba(3, 10, 109, 0.5);
+}
+.chart span canvas {
+  background-color: rgba(181, 160, 160, 0.6);
 }

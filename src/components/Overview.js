@@ -1,6 +1,6 @@
-
-
-
+import LineGraphBench  from './LineGraphBench.js'
+import LineGraphSquat from './LineGraphSquat.js'
+import LineGraphDeadlift from './LineGraphDeadlift.js'
 export const Overview = () => {
 
     return (
@@ -11,9 +11,9 @@ export const Overview = () => {
                 Goal
             </div>
             <div className="chart">
-                <span>Bench</span>
-                <span>Squat</span>
-                <span>Deadlift</span>
+                <span>Bench<LineGraphBench/></span>
+                <span>Squat<LineGraphSquat/></span>
+                <span>Deadlift<LineGraphDeadlift/></span>
             </div>
             <div className="bottom-paragrpah"></div>
         </section>
