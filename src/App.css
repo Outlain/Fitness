@@ -3,6 +3,17 @@
   margin: 0;
   box-sizing: border-box;
 }
+/*  MASTER CSS CLASSESS */
+.centering-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-white {
+  color: #d0d6e1;
+}
+/*  MASTER CSS CLASSESS */
+
 body {
   height: 100vh;
   width: 100vw;
@@ -112,4 +123,28 @@ body {
   /* background-color: #0d1427; */
   grid-column: 1/5;
   grid-row: 4;
+}
+.main-page-three-top {
+  height: 20%;
+  width: 100%;
+  /* background-color: red; */
+  align-items: start;
+}
+.main-page-three-bottom {
+  height: 80%;
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+}
+.main-page-three-master > span {
+  /* background-color: green; */
+  height: 100%;
+  width: 20%;
+}
+
+.main-page-three-master > span:nth-child(even) {
+  /* background-color: white; */
+  height: 100%;
+  width: 80%;
+  border: 0.1rem solid #121b34;
 }
