@@ -7,7 +7,7 @@ export const Overview = () => {
 
     return (
         <div className="main-wrapper">
-            <div className="sidebar"></div>
+            <div className="sidebar centering-flex text-white sticky">Navigation</div>
             <div className="main-page-wrapper">
                 <div className="main-page-top">Welcome to your Health/Workout dashboard : 'Username'</div>
                 <div className="main-page-middle-top-left">

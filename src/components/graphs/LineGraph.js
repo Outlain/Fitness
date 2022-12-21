@@ -12,7 +12,7 @@ export const options = {
         },
         title: {
             display: true,
-            text: 'Chart.js Line Chart'
+            text: 'Workout and Health line/Area Chart'
         }
     }
 };

@@ -33,6 +33,7 @@ const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 export default function MyAreaChart(excercise) {
     const options = {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 position: 'top',
