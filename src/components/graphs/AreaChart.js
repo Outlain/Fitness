@@ -25,30 +25,30 @@ ChartJS.register(
     Legend
 );
 
- const options = {
-    responsive: true,
-    plugins: {
-        legend: {
-            position: 'top',
-        },
-        title: {
-            display: true,
-            text: 'Chart.js Line Chart',
-        },
-    },
-};
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
 
 
 export default function MyAreaChart(excercise) {
+    const options = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: excercise.excercise.name + ' Area Graph',
+            },
+        },
+    };
     const data = {
         labels,
         datasets: [
             {
                 fill: true,
-                label: excercise.excercise,
+                label: excercise.excercise.excercise,
                 data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
                 borderColor: 'rgb(53, 162, 235)',
                 backgroundColor: 'rgba(53, 162, 235, 0.5)',
