@@ -24,7 +24,7 @@ export const data = {
     datasets: [
         {
             label: 'Total Volume (R*S*W)',
-            data: labels.map(() => faker.datatype.number({ min: 60, max: 80 })),
+            data: labels.map(() => faker.datatype.number({ min: 600, max: 800 })),
             borderColor: 'rgba(88,99,223,1)',
             backgroundColor: 'rgba(88,99,223,0.2)',
             pointBackgroundColor: 'rgba(88,99,223,1)',
@@ -33,7 +33,7 @@ export const data = {
         },
         {
             label: 'Max Weight (any excercise)',
-            data: labels.map(() => faker.datatype.number({ min: 16, max: 45 })),
+            data: labels.map(() => faker.datatype.number({ min: 160, max: 450 })),
             borderColor: '#36a2eb',
             backgroundColor: 'rgba(53, 162, 235, 0.5)',
             pointBackgroundColor: '#36a2eb',
@@ -41,7 +41,7 @@ export const data = {
         },
         {
             label: 'Total Time',
-            data: labels.map(() => faker.datatype.number({ min: 45, max: 60 })),
+            data: labels.map(() => faker.datatype.number({ min: 450, max: 600 })),
             borderColor: '#4bc0c0',
             backgroundColor: 'rgba(75, 192, 192, 0.5)',
             pointBackgroundColor: '#4bc0c0',
@@ -49,7 +49,7 @@ export const data = {
         },
         {
             label: 'Total Calories',
-            data: labels.map(() => faker.datatype.number({ min: 70, max: 120 })),
+            data: labels.map(() => faker.datatype.number({ min: 700, max: 1200 })),
             borderColor: '#fcc468',
             backgroundColor: 'rgba(252, 196, 104, 0.5)',
             pointBackgroundColor: '#fcc468',
@@ -57,7 +57,7 @@ export const data = {
         },
         {
             label: 'Average Workout HR',
-            data: labels.map(() => faker.datatype.number({ min: 130, max: 155 })),
+            data: labels.map(() => faker.datatype.number({ min: 1300, max: 1550 })),
             borderColor: '#2cc468',
             backgroundColor: 'rgba(252, 196, 104, 0.5)',
             pointBackgroundColor: '#2cc468',
@@ -65,7 +65,7 @@ export const data = {
         },
         {
             label: 'Average Daily HR',
-            data: labels.map(() => faker.datatype.number({ min: 43, max: 65 })),
+            data: labels.map(() => faker.datatype.number({ min: 430, max: 650 })),
             borderColor: 'rgba(225,225,225,1)',
             backgroundColor: 'rgba(252, 196, 104, 0.5)',
             pointBackgroundColor: 'rgba(225,225,225,1)',
