@@ -1,13 +1,11 @@
 import './App.css'
 import React from 'react';
-import { Nav } from './components/Nav'
-import { Overview } from './components/Overview';
+import { Overview } from './components/Overview.js';
 
 const App = () => {
 
     return (
-        <div>
-            <Nav />
+        <div className='first'>
             <Overview />
         </div>
     )
