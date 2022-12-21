@@ -1,6 +1,7 @@
 import React from 'react';
 import { Chart as ChartJS } from 'chart.js/auto';
 import { Line } from 'react-chartjs-2';
+import { faker } from '@faker-js/faker';
 export const iDoNotKnow = ChartJS
 export const options = {
     responsive: true,
@@ -18,20 +19,13 @@ export const options = {
 
 const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
-const dataset1Data = [100, 200, 300, 400, 250, 600, 700];
-const dataset2Data = [100, 120, 80, 100, 150, 120, 150];
-const dataset3Data = [500, 400, 300, 200, 100, 50, 25];
-const dataset4Data = [200, 300, 400, 500, 350, 700, 800];
-const dataset5Data = [150, 147, 160, 130, 150, 134, 140];
-const dataset6Data = [45, 45, 50, 41, 55, 45, 43];
-
 export const data = {
     labels,
     datasets: [
         {
             label: 'Total Volume (R*S*W)',
-            data: dataset1Data,
-            borderColor:'rgba(88,99,223,1)',
+            data: labels.map(() => faker.datatype.number({ min: 60, max: 80 })),
+            borderColor: 'rgba(88,99,223,1)',
             backgroundColor: 'rgba(88,99,223,0.2)',
             pointBackgroundColor: 'rgba(88,99,223,1)',
             pointRadius: 5,
@@ -39,7 +33,7 @@ export const data = {
         },
         {
             label: 'Max Weight (any excercise)',
-            data: dataset2Data,
+            data: labels.map(() => faker.datatype.number({ min: 16, max: 45 })),
             borderColor: '#36a2eb',
             backgroundColor: 'rgba(53, 162, 235, 0.5)',
             pointBackgroundColor: '#36a2eb',
@@ -47,8 +41,7 @@ export const data = {
         },
         {
             label: 'Total Time',
-            data: dataset3Data
-            ,
+            data: labels.map(() => faker.datatype.number({ min: 45, max: 60 })),
             borderColor: '#4bc0c0',
             backgroundColor: 'rgba(75, 192, 192, 0.5)',
             pointBackgroundColor: '#4bc0c0',
@@ -56,7 +49,7 @@ export const data = {
         },
         {
             label: 'Total Calories',
-            data: dataset4Data,
+            data: labels.map(() => faker.datatype.number({ min: 70, max: 120 })),
             borderColor: '#fcc468',
             backgroundColor: 'rgba(252, 196, 104, 0.5)',
             pointBackgroundColor: '#fcc468',
@@ -64,7 +57,7 @@ export const data = {
         },
         {
             label: 'Average Workout HR',
-            data: dataset5Data,
+            data: labels.map(() => faker.datatype.number({ min: 130, max: 155 })),
             borderColor: '#2cc468',
             backgroundColor: 'rgba(252, 196, 104, 0.5)',
             pointBackgroundColor: '#2cc468',
@@ -72,7 +65,7 @@ export const data = {
         },
         {
             label: 'Average Daily HR',
-            data: dataset6Data,
+            data: labels.map(() => faker.datatype.number({ min: 43, max: 65 })),
             borderColor: 'rgba(225,225,225,1)',
             backgroundColor: 'rgba(252, 196, 104, 0.5)',
             pointBackgroundColor: 'rgba(225,225,225,1)',
