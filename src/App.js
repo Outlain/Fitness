@@ -2,6 +2,7 @@ import './App.css'
 import { React, useState } from 'react'
 import { Overview } from './components/Overview.js';
 import Nav from './components/Nav.js';
+import { InProgress } from './components/views/InProgress.js';
 import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
@@ -14,6 +15,8 @@ const App = () => {
             <Nav isNavOpen={isNavOpen} onToggle={handleNavToggle} />
             <Routes>
                 <Route path='/' element={<Overview isNavOpen={isNavOpen} />} />
+                <Route path='/inprogress' element={<InProgress />} />
+
             </Routes>
 
         </div>

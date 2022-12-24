@@ -46,7 +46,7 @@ export const Nav = (props) => {
             {!isNavOpen && (
                 <ul>
                     <li><a href="/"><HomeIcon /></a></li>
-                    <li><a href="/signin"><SingInIcon /></a></li>
+                    <li><a href="/inprogress"><SingInIcon /></a></li>
                 </ul>
             )}
         </nav>
