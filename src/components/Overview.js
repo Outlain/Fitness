@@ -3,11 +3,12 @@ import MyLineChart from './graphs/LineGraph.js'
 import MyDoughnutChart from './graphs/DonughtGraph.js'
 // import MyBarChart from './graphs/BarGraph.js'
 import MyAreaChart from './graphs/AreaChart.js'
+import Nav from './Nav.js' 
 export const Overview = () => {
 
     return (
         <div className="main-wrapper">
-            <div className="sidebar centering-flex text-white sticky">Navigation</div>
+            <Nav/>
             <div className="main-page-wrapper">
                 <div className="main-page-top">Welcome to your Health/Workout dashboard : 'Username'</div>
                 <div className="main-page-middle-top-left">

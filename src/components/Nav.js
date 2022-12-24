@@ -1,6 +1,10 @@
-
+import { React, useState } from 'react'
+import { ToggleIcon , ShoesIcon } from '../svgs/NavSvg.js';
 
 export const Nav = () => {
+    const [isNavOpen, setIsNavOpen] = useState(false);
+
+
     window.onscroll = function () {
         var navbar = document.getElementById("navbar");
         if (window.pageYOffset > 0) {
@@ -11,10 +15,15 @@ export const Nav = () => {
     };
 
     return (
-        <nav id="navbar">
+        <nav id="navbar" className={isNavOpen ? 'nav-open sidebar centering-flex text-white sticky' : 'nav-closed sidebar centering-flex text-white sticky'}>
+            <button onClick={() => setIsNavOpen(!isNavOpen)}>
+                <ToggleIcon />
+            </button>
             <ul>
-                <li><a href="#About">New Lifts</a></li>
+                <li><a href="#About"><ShoesIcon/></a></li>
             </ul>
         </nav>
     )
 }
+
+export default Nav
