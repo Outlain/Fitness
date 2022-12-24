@@ -1,9 +1,13 @@
 import { React, useState } from 'react'
-import { ToggleIcon , ShoesIcon } from '../svgs/NavSvg.js';
+import { ToggleIcon, ShoesIcon, WeightsIcon, HomeIcon, SingInIcon, LogoIcon } from './svgs/NavSvg.js';
 
-export const Nav = () => {
-    const [isNavOpen, setIsNavOpen] = useState(false);
+export const Nav = (props) => {
+    const [isNavOpen, setIsNavOpen] = useState(props.isNavOpen);
 
+    const handleToggle = () => {
+        setIsNavOpen(!isNavOpen);
+        props.onToggle(!isNavOpen);
+    }
 
     window.onscroll = function () {
         var navbar = document.getElementById("navbar");
@@ -16,12 +20,35 @@ export const Nav = () => {
 
     return (
         <nav id="navbar" className={isNavOpen ? 'nav-open sidebar centering-flex text-white sticky' : 'nav-closed sidebar centering-flex text-white sticky'}>
-            <button onClick={() => setIsNavOpen(!isNavOpen)}>
-                <ToggleIcon />
-            </button>
-            <ul>
-                <li><a href="#About"><ShoesIcon/></a></li>
-            </ul>
+            {isNavOpen && (
+                <button className={isNavOpen ? 'nav-open-button' : 'nav-closed-button'} onClick={handleToggle}>
+                    <LogoIcon />
+                    <ToggleIcon />
+                </button>
+            )}
+            {!isNavOpen && (
+                <button className={isNavOpen ? 'nav-open-button' : 'nav-closed-button'} onClick={handleToggle}>
+                    <ToggleIcon />
+                </button>
+            )}
+
+            {isNavOpen && (
+                <ul>
+                    <li><a href="#Home"><HomeIcon /><span>Demonstaration Website HomePage</span></a></li>
+                    <li><a href="/inprogress"><SingInIcon /><span>Demonstaration Website HomePage</span></a></li>
+                    <li><a href="/inprogress"><ShoesIcon /><span>Demonstaration Website HomePage</span></a></li>
+                    <li><a href="/inprogress"><WeightsIcon /><span>Demonstaration Website HomePage</span></a></li>
+                    <li><a href="/inprogress"><HomeIcon /><span>Demonstaration Website HomePage</span></a></li>
+                    <li><a href="/inprogress"><HomeIcon /><span>Demonstaration Website HomePage</span></a></li>
+                    <li><a href="/inprogress"><HomeIcon /><span>Demonstaration Website HomePage</span></a></li>
+                </ul>
+            )}
+            {!isNavOpen && (
+                <ul>
+                    <li><a href="/"><HomeIcon /></a></li>
+                    <li><a href="/signin"><SingInIcon /></a></li>
+                </ul>
+            )}
         </nav>
     )
 }

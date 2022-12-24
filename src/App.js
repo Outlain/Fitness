@@ -1,12 +1,21 @@
 import './App.css'
-import React from 'react';
+import { React, useState } from 'react'
 import { Overview } from './components/Overview.js';
+import Nav from './components/Nav.js';
+import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
-
+    const [isNavOpen, setIsNavOpen] = useState(false);
+    const handleNavToggle = (newValue) => {
+        setIsNavOpen(newValue);
+    }
     return (
-        <div className='first'>
-            <Overview />
+        <div className={isNavOpen ? 'main-main-wrapper' : 'main-main-wrapper'}>
+            <Nav isNavOpen={isNavOpen} onToggle={handleNavToggle} />
+            <Routes>
+                <Route path='/' element={<Overview isNavOpen={isNavOpen} />} />
+            </Routes>
+
         </div>
     )
 }

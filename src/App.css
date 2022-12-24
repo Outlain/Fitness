@@ -28,23 +28,39 @@ body {
   width: 100%;
   /* background-color: green; */
 }
-.main-wrapper {
+.main-main-wrapper {
   background-color: #070e19;
   height: 100%;
   width: 100%;
   display: flex;
 }
-.sidebar {
+.main-wrapper-closed {
+  background-color: #070e19;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.main-wrapper-open {
+  height: 100%;
+  width: 80%;
+}
+.nav-closed {
   height: 100%;
   width: 5%;
   background-color: #0d1427;
   margin-right: 1rem;
 }
+.nav-open {
+  height: 100%;
+  width: 20%;
+  background-color: #0d1427;
+  margin-right: 1rem;
+}
 .main-page-wrapper {
   /* background-color: #070e19; */
-  padding: 0 2% 1% 0;
+  padding: 0 0 1% 0;
   height: 100%;
-  width: 95%;
+  width: 97%;
   display: grid;
   gap: 1rem;
   grid-template-columns: minmax(0, 5fr) minmax(0, 5fr) minmax(0, 1fr) minmax(
@@ -55,9 +71,6 @@ body {
       0,
       1fr
     );
-}
-.main-page-wrapper div {
-  /* border: 0.1rem solid black; */
 }
 .main-page-top {
   /* background-color: orange; */
@@ -150,6 +163,103 @@ body {
   border: 0.1rem solid #121b34;
 }
 
+/* NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR  NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR */
+#navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#navbar.nav-closed button {
+  background-color: rgba(13, 20, 39, 0);
+  color: white;
+  border: none;
+  height: 10%;
+  width: 100%;
+}
+
+#navbar > button > svg {
+  height: 100%;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+}
+#navbar ul {
+  height: 90%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar ul li {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: column;
+  justify-content: center;
+  align-items: center;
+}
+#navbar svg {
+  width: 100%;
+  height: 95%;
+}
+#navbar.nav-open button {
+  background-color: rgba(13, 20, 39, 0);
+  color: white;
+  border: none;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#navbar.nav-open ul {
+  height: 90%;
+  width: 95%;
+}
+#navbar.nav-open ul li {
+  height: 14%;
+  width: 100%;
+}
+#navbar.nav-open ul li a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#navbar.nav-open ul li a svg {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#navbar.nav-open ul li a span {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+.nav-closed-button {
+  animation: pulse 2s infinite;
+}
+
+/* MEDIA SCREENS MEDIA SCREENS MEDIA SCREENS MEDIA SCREENS MEDIA SCREENS MEDIA SCREENS MEDIA SCREENS MEDIA SCREENS MEDIA SCREENS MEDIA SCREENS  */
 @media screen and (max-width: 1000px) {
   body {
     height: 200vh;
@@ -221,7 +331,7 @@ body {
     width: 100%;
     /* background-color: green; */
   }
-  .main-wrapper {
+  .main-main-wrapper {
     background-color: #070e19;
     height: 100%;
     width: 100%;
@@ -310,7 +420,7 @@ body {
     align-items: center;
     justify-content: center;
   }
-  
+
   .main-page-three-master > span:nth-child(even) {
     /* background-color: white; */
     height: 100%;
@@ -323,55 +433,52 @@ body {
     margin: 0;
     padding: 0;
     /* border: 1px solid red; */
-    writing-mode: horizontal-tb;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #navbar button {
+    color: white;
+    border: none;
+    height: 100%;
+    width: 15%;
+  }
+  #navbar ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #navbar ul li {
+    height: 50%;
+    width: auto;
+    display: flex;
+    justify-content: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #navbar ul li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #navbar > button > svg {
+    height: 100%;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+  }
+
+  #navbar svg {
+    width: 100%;
+    height: 100%;
   }
 }
-#navbar {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-#navbar button{
-  background-color: rgb(13,20,39);
-  color: white;
-  border: none;
-  height: 10%;
-  width: 100%;
-}
-#navbar ul {
-  height: 90%;
-  width: 100%;
-  display: flex;
-  justify-content: column;
-  justify-content: center;
-  align-items: center;
-}
-#navbar ul li{
-  height: 90%;
-  width: 100%;
-  display: flex;
-  justify-content: column;
-  justify-content: center;
-  align-items: center;
-}
-#navbar ul li a{
-  height: 90%;
-  width: 100%;
-  display: flex;
-  justify-content: column;
-  justify-content: center;
-  align-items: center;
-}
-#navbar button svg{
-  height: 100%;
-  width: 100%;
-  color: white;
-  cursor: pointer;
-}
-
-#navbar svg {
-  height: 10%;
-  width: 100%;
-}
-
