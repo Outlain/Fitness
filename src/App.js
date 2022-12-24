@@ -16,9 +16,7 @@ const App = () => {
             <Routes>
                 <Route path='/' element={<Overview isNavOpen={isNavOpen} />} />
                 <Route path='/inprogress' element={<InProgress />} />
-
             </Routes>
-
         </div>
     )
 }
